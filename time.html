@@ -17,8 +17,8 @@
 	function getColor(){
 		var date = new Date();
 		var hue = date.getSeconds()*360/60;
-		var saturation = date.getMinutes()*100/60;
-		var value = ((12+date.getHours())%24)*100/24;
+		var saturation = (date.getMinutes()*60+date.getSeconds())*100/3600;
+		var value = (((12+date.getHours())%24)*60+date.getMinutes())*100/1440;
 		var div = document.getElementById( 'test_div' );
 		div.style.backgroundColor = hsl(hue,saturation,value);
 		div.style.bgColor = hsl(hue,saturation,value);
@@ -40,7 +40,7 @@
 	}
 	function run(){
 		getColor();
-		setTimeout(getColor(),1000);
+		setTimeout(getColor(),166);
 		var fieldNameElement = document.getElementById('text_div');
 		fieldNameElement.style.fontFamily = "Normal,Charcoal,sans-serif";
 		fieldNameElement.style.letterSpacing="10px";
