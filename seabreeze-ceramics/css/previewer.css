@@ -1,0 +1,9 @@
+.body{
+	background-color: ##383838;
+	
+}
+
+.overlay {
+    display: none;
+    position: absolute;
+}
