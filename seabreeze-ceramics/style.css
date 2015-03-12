@@ -34,6 +34,12 @@ img{
 	border: 0;
 }
 
+.headerImg{
+	max-width:90%;
+	border: 0;
+	margin: 20px 20px 20px 20px;
+}
+
 h1, #pixels{
 	font-family:"Museo 900", Verdana, serif;
 	color: #4d96cf;
