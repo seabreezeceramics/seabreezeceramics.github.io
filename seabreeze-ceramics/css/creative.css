@@ -121,7 +121,7 @@ aside {
     background-color: transparent;
 }
 
-@media(min-width:768px) {
+@media(min-width:10cm) {
     .navbar-default {
         border-color: rgba(255,255,255,.3);
         background-color: transparent;
@@ -275,8 +275,8 @@ header .header-content .header-content-inner p {
     height: 100%;
     text-align: center;
     color: #333;
-    /*opacity: 0;*/
-    /*background: rgba(83, 140, 201,.9);*/
+    /*opacity: 0.5;
+    background: rgba(83, 140, 201,.9);*/
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -308,12 +308,12 @@ header .header-content .header-content-inner p {
 
 .portfolio-box:hover .portfolio-box-caption {
     /*opacity: 1;*/
-    background: rgba(83, 140, 201,.9);
+    background: rgba(83, 140, 201,.5);
 }
 
 @media(min-width:768px) {
     .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
-        font-size: 40px;
+        font-size: 32px;
     }
 
     .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
