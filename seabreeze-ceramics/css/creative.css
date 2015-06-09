@@ -100,7 +100,7 @@ aside {
 .navbar-default .nav > li>a,
 .navbar-default .nav>li>a:focus {
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 1.0em;
     font-weight: 700;
     color: #222;
 }
@@ -443,13 +443,14 @@ fieldset[disabled] .btn-primary.active {
 .btn {
     border: 0;
     border-radius: 300px;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
     font-weight: 700;
 }
 
 .btn-xl {
     padding: 15px 30px;
+    font-size: 2em;
 }
 
 ::-moz-selection {
