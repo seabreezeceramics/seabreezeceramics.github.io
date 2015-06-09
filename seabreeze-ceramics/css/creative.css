@@ -121,7 +121,7 @@ aside {
     background-color: transparent;
 }
 
-@media(min-width:10cm) {
+@media(min-width:1024px) {
     .navbar-default {
         border-color: rgba(255,255,255,.3);
         background-color: transparent;
@@ -213,7 +213,7 @@ header .header-content .header-content-inner p {
     color: rgba(30,30,30,1.0);
 }
 
-@media(min-width:768px) {
+@media(min-width:1024px) {
     header {
         min-height: 100%;
     }
@@ -311,7 +311,7 @@ header .header-content .header-content-inner p {
     background: rgba(83, 140, 201,.5);
 }
 
-@media(min-width:768px) {
+@media(min-width:1024px) {
     .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
         font-size: 32px;
     }
