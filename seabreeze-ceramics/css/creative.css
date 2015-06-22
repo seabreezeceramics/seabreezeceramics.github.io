@@ -241,6 +241,10 @@ header .header-content .header-content-inner p {
     }
 }
 
+p.text-quote{
+    font-style: italic;
+}
+
 .section-heading {
     margin-top: 0;
 }
