@@ -172,6 +172,10 @@ aside {
     }
 }
 
+.shortHeader {
+    background: #c4e0e7;
+}
+
 header {
     position: relative;
     width: 100%;
