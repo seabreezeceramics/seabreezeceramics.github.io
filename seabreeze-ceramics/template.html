@@ -102,7 +102,7 @@
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category">
-                                    Small Unframed - £49.50
+                                    Small Unframed - £<i id="smallUnframed"></i>
                                 </div>
                                 <div class="project-name">
                                     <p>
@@ -126,7 +126,7 @@
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category">
-                                    Large Unframed - £59.50
+                                    Large Unframed - £<i id="largeUnframed"></i>
                                 </div>
                                 <div class="project-name">
                                     <p>
@@ -150,7 +150,7 @@
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category">
-                                    Small Framed - £59.50
+                                    Small Framed - £<i id="smallFramed"></i>
                                 </div>
                                 <div class="project-name">
                                     <p>
@@ -174,7 +174,7 @@
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category">
-                                    Large Framed - £64.50
+                                    Large Framed - £<i id="largeFramed"></i>
                                 </div>
                                 <div class="project-name">
                                     <p>
@@ -271,13 +271,17 @@
 <!-- Custom product page injection-->
 <script>
     function insertProduct(){
-    var tileType = location.search.split('type=')[1] ? location.search.split('type=')[1] : 'Dogs';
+    var tileType = location.search.split('type=')[1] ? location.search.split('type=')[1] : 'dog';
     var injections = document.getElementsByName("titleText")
     var i;
+    var infoLocation = templateInfo[tileType] ? templateInfo[tileType] : templateInfo['dog'];
     for (i = 0; i < injections.length; i++) {
-        injections[i].textContent = tileType;
+        injections[i].textContent = infoLocation.title;
     }
-
+    document.getElementById("largeFramed").textContent = infoLocation.prices.largeFramed;
+    document.getElementById("smallFramed").textContent = infoLocation.prices.smallFramed;
+    document.getElementById("largeUnframed").textContent = infoLocation.prices.largeUnframed;
+    document.getElementById("smallUnframed").textContent = infoLocation.prices.smallUnframed;
     }
 </script>
 
@@ -317,6 +321,9 @@ chosen link or button. -->
 </script>
 <script type="text/javascript"
   src="http://www.googleadservices.com/pagead/conversion_async.js">
+</script>
+<script type="text/javascript"
+  src="js/templateInfo.js">
 </script>
 
 
