@@ -278,10 +278,10 @@
     for (i = 0; i < injections.length; i++) {
         injections[i].textContent = infoLocation.title;
     }
-    document.getElementById("largeFramed").textContent = infoLocation.prices.largeFramed;
-    document.getElementById("smallFramed").textContent = infoLocation.prices.smallFramed;
-    document.getElementById("largeUnframed").textContent = infoLocation.prices.largeUnframed;
-    document.getElementById("smallUnframed").textContent = infoLocation.prices.smallUnframed;
+    document.getElementById("largeFramed").textContent = infoLocation.sizes.largeFramed.price;
+    document.getElementById("smallFramed").textContent = infoLocation.sizes.smallFramed.price;
+    document.getElementById("largeUnframed").textContent = infoLocation.sizes.largeUnframed.price;
+    document.getElementById("smallUnframed").textContent = infoLocation.sizes.smallUnframed.price;
     }
 </script>
 
