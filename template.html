@@ -95,7 +95,7 @@
     </section>
  <section class="no-padding" id="portfolio">
         <div class="container-fluid">
-            <div class="row no-gutter">
+            <div class="row no-gutter" id="tileBox">
                 <div class="col-md-6">
                     <div href="#" class="portfolio-box">
                         <img src="img/portfolio/smallunframed50.jpg" class="img-responsive" alt="">
@@ -278,12 +278,44 @@
     for (i = 0; i < injections.length; i++) {
         injections[i].textContent = infoLocation.title;
     }
-    document.getElementById("largeFramed").textContent = infoLocation.sizes.largeFramed.price;
+    tileboxstring = "";
+    for (i = 0; i < infoLocation.sizes.length; i++) {
+        tile = infoLocation.sizes[i];
+        tileboxstring +=  " <div class=\"col-md-6\">\
+                    <div href=\"#\" class=\"portfolio-box\">\
+                        <img src=\""+tile.image+"\" class=\"img-responsive\" alt=\"\">\
+                        <div class=\"portfolio-box-caption\">\
+                            <div class=\"portfolio-box-caption-content\">\
+                                <div class=\"project-category\">\
+                                    "+tile.name+" - £"+tile.price+"\
+                                </div>\
+                                <div class=\"project-name\">\
+                                    <p>\
+                                        "+tile.description+"\
+                                    </p>\
+                                    <form action=\"https://www.paypal.com/cgi-bin/webscr\" method=\"post\" target=\"_top\">\
+                                <input type=\"hidden\" name=\"cmd\" value=\"_s-xclick\">\
+                                <input type=\"hidden\" name=\"hosted_button_id\" value=\"RCTK9PPD7YMLA\">\
+                                <button type=\"submit\" class=\"btn btn-primary btn-block\" onclick=\"goog_report_sale("+tile.price+")\">\
+                                  <i class=\"fa fa-paypal\"> Buy with PayPal or Card</i>\
+                                </button>\
+                              </form>\
+                                </div>\
+                            </div>\
+                        </div>\
+                    </div>\
+                </div>"
+    }
+    
+    
+    document.getElementById("tileBox").innerHTML = tileboxstring;
+/*    document.getElementById("largeFramed").textContent = infoLocation.sizes.largeFramed.price;
     document.getElementById("smallFramed").textContent = infoLocation.sizes.smallFramed.price;
     document.getElementById("largeUnframed").textContent = infoLocation.sizes.largeUnframed.price;
-    document.getElementById("smallUnframed").textContent = infoLocation.sizes.smallUnframed.price;
+    document.getElementById("smallUnframed").textContent = infoLocation.sizes.smallUnframed.price;*/
     }
 </script>
+
 
 
 <!-- Google Code for Paypal Purchases Conversion Page

@@ -1,21 +1,19 @@
 var templateInfo = {
 "dog":{
 	"title": "Dogs",
-	"sizes": {
-		"largeFramed": {"price" : '64.50'},
-		"largeUnframed": {"price" :'59.50'},
-		"smallUnframed": {"price" :'49.50'},
-		"smallFramed": {"price" :'59.50'}
-	}
+	"sizes": [
+		{"size":"largeFramed", "name":"Large Framed", "price" : '64.50',"image":"img/portfolio/largeframed50.jpg", "description":"For bigger dogs such as German Shepherds, Labradors, Bull Terriers and Border Collies"},
+		{"size":"largeUnframed", "name":"Large Unframed", "price" :'59.50',"image":"img/portfolio/largeunframed50.jpg"},
+		{"size":"smallUnframed", "name":"Small Unframed", "price" :'49.50',"image":"img/portfolio/smallunframed50.jpg"},
+		{"size":"smallFramed", "name":"Small Framed", "price" :'59.50',"image":"img/portfolio/smallframed50.jpg"}
+	]
 },
 "cat":{
 	"title": "Cats",
-	"sizes": {
-		"largeFramed": {"price" : '64.50'},
-		"largeUnframed": {"price" :'59.50'},
-		"smallUnframed": {"price" :'49.50'},
-		"smallFramed": {"price" :'59.50'}
-	}
+	"sizes": [
+		{"size":"smallUnframed", "name":"Small Unframed", "price" :'49.50',"image":"img/portfolio/smallunframed50.jpg"},
+		{"size":"smallFramed", "name":"Small Framed", "price" :'59.50',"image":"img/portfolio/smallframed50.jpg"}
+	]
 },
 "horse":{
 	"title": "Horses",
