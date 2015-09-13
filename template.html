@@ -76,11 +76,24 @@
                     <li>
                         <a class="page-scroll" href="index.html#contact">Contact Us</a>
                     </li>
-                    
+                    <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Basket<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#cart">View Basket</a></li>
+                        <li><a href="javascript:;" class="simpleCart_checkout">Checkout</a></li>
+                        <li><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#cart"> <div class="simpleCart_quantity"></div> items</a></li>
+                        <li><a href="#cart">Total: <div class="simpleCart_grandTotal"></div></a></li>
+                      </ul>
+                    </li>
                     
                 </ul>
+
             </div>
             <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.navbar-header -->
         </div>
         <!-- /.container-fluid -->
     </nav>
@@ -215,9 +228,14 @@
                                     <p>\
                                         "+tile.description+"\
                                     </p>\
-                                    <p><input  style=\"width: 100px;\" maxlength=\"25\" type=\"text\" value=\"1\" class=\"item_Quantity\">\
-                                    £<span class=\"item_price\">"+tile.price+"</span></p>\
-                                    <a class=\"btn btn-primary btn-block item_add\" href=\"javascript:;\"><i class=\"fa fa-paypal\"> Add to Basket</i>\</a>\
+                                    <div class=\"input-group\">\
+                                        <span class=\"input-group-addon\" id=\"basic-addon1\">Quantity</span>\
+                                        <input type=\"number\" min=\"1\" max=\"99\" maxlength=\"2\" class=\"form-control item_Quantity\" placeholder=\"1\" value=\"1\" aria-describedby=\"basic-addon1\">\
+                                        <span class=\"input-group-addon\" id=\"basic-addon1\">£<i class=\"item_price\">"+tile.price+"</i></span>\
+                                        <span class=\"input-group-btn\">\
+                                            <button class=\"btn btn-default item_add\" onclick=\"javascript:;\" type=\"button\"><i class=\"fa fa-cart-plus\"></i> Add</button>\
+                                        </span>\
+                                    </div>\
                                 </div>\
                             </div>\
                         </div>\
@@ -285,7 +303,6 @@ chosen link or button. -->
         email: "seabreezeceramicsuk@gmail.com" 
     },
     currency:   "GBP"
-});
 </script>
 
 
