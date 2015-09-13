@@ -137,6 +137,7 @@
 <div class="simpleCart_shipping"></div>-->
 
 <!-- grand total, including tax and shipping (ex. $28.49) -->
+<h2>Grand Total</h2>
 <div class="simpleCart_grandTotal"></div>
 </div>
 </div>
@@ -214,16 +215,9 @@
                                     <p>\
                                         "+tile.description+"\
                                     </p>\
-                                    <input type=\"text\" value=\"1\" class=\"item_Quantity\">\
-                                    <span class=\"item_price\">"+tile.price+"</span>\
-                                    <a class=\"item_add\" href=\"javascript:;\"> Add to Cart </a>\
-                                    <form action=\"https://www.paypal.com/cgi-bin/webscr\" method=\"post\" target=\"_top\">\
-                                        <input type=\"hidden\" name=\"cmd\" value=\"_s-xclick\">\
-                                        <input type=\"hidden\" name=\"hosted_button_id\" value=\"RCTK9PPD7YMLA\">\
-                                        <button type=\"submit\" class=\"btn btn-primary btn-block\" onclick=\"goog_report_sale("+tile.price+")\">\
-                                            <i class=\"fa fa-paypal\"> Buy with PayPal or Card</i>\
-                                        </button>\
-                                    </form>\
+                                    <p><input  style=\"width: 100px;\" maxlength=\"25\" type=\"text\" value=\"1\" class=\"item_Quantity\">\
+                                    £<span class=\"item_price\">"+tile.price+"</span></p>\
+                                    <a class=\"btn btn-primary btn-block item_add\" href=\"javascript:;\"><i class=\"fa fa-paypal\"> Add to Basket</i>\</a>\
                                 </div>\
                             </div>\
                         </div>\
