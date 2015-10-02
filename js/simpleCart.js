@@ -91,10 +91,10 @@
 					currency				: "GBP",
 					language				: "english-uk",
 
-					cartStyle				: "div",
+					cartStyle				: "table",
 					cartColumns			: [
 						{ attr: "name", label: "Name" },
-						{ attr: "price", label: "Price", view: 'currency' },
+						//{ attr: "price", label: "Price", view: 'currency' },
 						{ view: "decrement", label: false },
 						{ attr: "quantity", label: "Qty" },
 						{ view: "increment", label: false },
@@ -626,7 +626,7 @@
 						TH = isTable ? 'th' : 'div',
 						TD = isTable ? 'td' : 'div',
 						THEAD = isTable ? 'thead' : 'div',
-						cart_container = simpleCart.$create(TABLE),
+						cart_container = simpleCart.$create(TABLE).attr("class","table table-striped"),
 						thead_container = simpleCart.$create(THEAD),
 						header_container = simpleCart.$create(TR).addClass('headerRow'),
 						container = simpleCart.$(selector),
@@ -936,6 +936,7 @@
 							, tax_cart		: (simpleCart.tax()*1).toFixed(2)
 							, handling_cart : (simpleCart.shipping()*1).toFixed(2)
 							, charset		: "utf-8"
+							//, discount_amount_cart: "10.00"
 						},
 						action = opts.sandbox ? "https://www.sandbox.paypal.com/cgi-bin/webscr" : "https://www.paypal.com/cgi-bin/webscr",
 						method = opts.method === "GET" ? "GET" : "POST";
