@@ -27,6 +27,7 @@ var templateInfo = {
 },
 "baby":{
 	"title": "Babies",
+	"header" : "We make tiles of babies hand and footprints for new parents and for the whole family. They grow up so fast and our tiles provide an amazing keepsake of the special day to trasure forever.",
 	"sizes": [
 		{"size":"largeFramed", "name":"Large Framed Tile for Babies", "price" : '65.00',"image":"img/portfolio/baby/baby_large_framed.jpg", "description":"A large tile for two hands, two feet or one of each."},
 		{"size":"largeUnframed", "name":"Large Unframed Tile for Babies", "price" :'60.00',"image":"img/portfolio/baby/baby_large_framed.jpg", "description":"A large tile for two hands, two feet or one of each."},
