@@ -234,7 +234,7 @@
                 </div>
                 <div class="col-md-6">
                     <div href="#" class="portfolio-box">
-                        <img src="img/portfolio/horse/horse_framed2.jpg" class="img-responsive" alt="">
+                        <img src="img/portfolio/horse/horse_framed.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category">
@@ -274,13 +274,16 @@
 <img src="img/portfolio/kit50.jpg" class="img-responsive" alt="">
 <div class="portfolio-box-caption">
 <div class="portfolio-box-caption-content">
-<div class="project-category item_name">Gift Kit</div>
+
+<div class="project-category item_name">Gift Voucher</div>
 <div class="project-name">
-<p>A starter kit for people looking to buy or purchase towards an imprint for someone else. When you buy a kit, we discount the cost of any of our products to the lucky recepient by £25.</p>
+<p>A starter kit for people looking to buy or purchase towards an imprint for someone else. When you buy a kit, we discount the cost of any of our products to the lucky recepient by the cost of the gift voucher you buy.</p>
 <div class="input-group">
 <span class="input-group-addon" id="basic-addon1">Quantity</span>
 <input type="number" min="1" max="99" maxlength="2" class="form-control item_Quantity" placeholder="1" value="1" aria-describedby="basic-addon1">
-<span class="input-group-addon" id="basic-addon1">£<i class="item_price">25.00</i></span>
+<span class="input-group-addon" id="basic-addon1">Voucher Price £</span>
+<input type="number" min="25.00" max="500.00" step="0.01" maxlength="10" class="form-control item_price" placeholder="25.00" value="25.00" aria-describedby="basic-addon1" pattern='^\d+(?:\.\d{0,2})$' required>
+<!--<span class="input-group-addon" id="basic-addon1">£<i class="item_price">25.00</i></span>-->
 <span class="input-group-btn">
 <button class="btn btn-default item_add" onclick="javascript:;" type="button"><i class="fa fa-cart-plus"></i> Add</button>
 </span>
