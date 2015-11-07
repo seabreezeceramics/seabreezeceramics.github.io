@@ -888,6 +888,9 @@
 					} else if (isFunction(simpleCart.checkout[settings.checkout.type])) {
 						var checkoutData = simpleCart.checkout[settings.checkout.type].call(simpleCart,settings.checkout);
 						
+						//Report the sale
+						goog_report_sale(simpleCart.grandTotal());
+
 						// if the checkout method returns data, try to send the form
 						if( checkoutData.data && checkoutData.action && checkoutData.method ){
 							// if no one has any objections, send the checkout form
@@ -990,7 +993,7 @@
 						// options count
 						data["option_index_"+ x] = Math.min(10, optionCount);
 					});
-
+					
 
 					// return the data for the checkout form
 					return {
