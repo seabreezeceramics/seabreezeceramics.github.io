@@ -1777,7 +1777,17 @@
 
 							$button.closest("." + namespace + "_shelfItem").descendants().each(function (x,item) {
 								var $item = simpleCart.$(item);
-
+								if ($item.attr("class") &&
+									$item.attr("class").match(/item_.+/) &&
+									$item.attr('class').match(/item_add/)) {
+										$item.html("<i class=\"fa fa-plus\"></i> Added");
+									    $("#navbarcollapse").html("<i class=\"fa fa-plus\"></i> Added to Basket");
+									    setTimeout(function(){ 
+									    	$item.html("<i class=\"fa fa-cart-plus\"></i> Add");
+									    	$("#navbarcollapse").html("<span class=\"sr-only\">Toggle navigation</span><span class=\"icon-bar\"></span><span class=\"icon-bar\"></span><span class=\"icon-bar\"></span>"); 
+									    }, 3000) ;
+										
+								}
 								// check to see if the class matches the item_[fieldname] pattern
 								if ($item.attr("class") &&
 									$item.attr("class").match(/item_.+/) &&
