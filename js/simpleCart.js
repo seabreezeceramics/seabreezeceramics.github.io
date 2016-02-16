@@ -185,7 +185,7 @@
 							return false;
 						}
 					}
-					
+					ga('send', 'event', { eventCategory: 'ButtonClick', eventAction: 'AddToBasket', eventLabel: 'AddedItem', eventValue: 1});
 					// if the new item already exists, increment the value
 					oldItem = simpleCart.has(newItem);
 					if (oldItem) {
