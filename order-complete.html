@@ -102,7 +102,8 @@
         <div class="container">
             <div class="row text-center">
                 <div class="col-lg-12 ">
-                     <h1><div name="titleText">Basket<i class="fa fa-shopping-cart"></i></div></h1>
+                     <h1><div name="titleText">Order Complete
+                        <i class="fa fa-star-o fa-spin fa-lg" style="color:yellow"></i></div></h1>
                 </div>
             </div>
         </div>
@@ -110,10 +111,10 @@
  <section class="no-padding" id="portfolio">
         <div class="container-fluid">
             <div class="row no-gutter" id="tileBox">
-                 <div class="col-lg-12 text-left">
+                 <div class="col-lg-12 text-center">
                 <!-- show the cart -->
                 <h2>Thank You</h2>
-                
+                Thanks for your order! We'll be in touch shortly to let you know once it's been shipped. 
                 </div>
             </div>
         </div>
@@ -160,10 +161,12 @@ n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
 n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
 document,'script','https://connect.facebook.net/en_US/fbevents.js');
-
+var orderSuccess = location.search.split('success=')[1] ? location.search.split('success=')[1] : 'false';
 fbq('init', '1891846877708825');
 fbq('track', "PageView");
-fbq('track', 'Purchase', {value: '0.00', currency:'GBP'});
+if (orderSuccess=='true'){
+    fbq('track', 'Purchase', {value: '0.00', currency:'GBP'});
+}
 </script>
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1891846877708825&ev=PageView&noscript=1"

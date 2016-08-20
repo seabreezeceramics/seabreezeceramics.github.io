@@ -113,7 +113,9 @@
 					
 					taxShipping			: false,
 
-					data				: {}
+					data				: {},
+					// url to return to on successful checkout, default is null
+			        success: "order-complete.html?success=true"
 
 				},
 
